@@ -1,0 +1,10 @@
+{
+  "name": "handsfree-media-controller",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension (MV3) that controls video playback with hand gestures using on-device MediaPipe hand tracking.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/gestures.test.js"
+  }
+}

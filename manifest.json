@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Handsfree Media Controller",
+  "version": "0.1.0",
+  "description": "Control video playback with hand gestures from your webcam. Hand tracking runs on-device with MediaPipe.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_title": "Handsfree Media Controller",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/gestures.js", "src/actions.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["tracker.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

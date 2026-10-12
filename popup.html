@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Handsfree Media Controller</title>
+  <style>
+    body { width: 300px; margin: 0; padding: 12px; font: 13px system-ui, sans-serif; }
+    h1 { font-size: 15px; margin: 0 0 10px; }
+    button { padding: 6px 10px; cursor: pointer; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 6px 0; }
+    select { width: 150px; }
+    #status { margin-top: 8px; color: #555; min-height: 1.2em; }
+    hr { margin: 12px 0; border: 0; border-top: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>Handsfree Media Controller</h1>
+  <button id="toggle">Start on this tab</button>
+  <div id="status"></div>
+  <hr>
+  <div id="mapping"></div>
+  <div class="row"><button id="reset">Reset to defaults</button></div>
+  <script src="src/gestures.js"></script>
+  <script src="src/actions.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

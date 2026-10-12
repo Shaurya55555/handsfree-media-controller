@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Handsfree tracker</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font: 12px system-ui, sans-serif; }
+    #wrap { position: relative; width: 100%; height: 100%; }
+    video, canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+    #label { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 6px; color: #fff; background: rgba(0,0,0,.6); }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <video id="cam" playsinline muted></video>
+    <canvas id="overlay"></canvas>
+    <div id="label">Starting camera...</div>
+  </div>
+  <script src="src/gestures.js"></script>
+  <script type="module" src="src/tracker.js"></script>
+</body>
+</html>
